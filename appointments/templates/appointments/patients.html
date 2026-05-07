@@ -1,0 +1,31 @@
+{% extends 'appointments/base.html' %}
+
+{% block content %}
+<section class="page-header py-16 bg-navy text-white">
+    <div class="container">
+        <h1>Patient Services</h1>
+        <p>Comprehensive care tailored to your specific needs.</p>
+    </div>
+</section>
+
+<section class="services-grid py-20">
+    <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="service-card p-8 border rounded-2xl hover:shadow-xl transition-all">
+            <h3 class="text-xl font-bold text-navy">General Medicine</h3>
+            <p class="mt-4 text-gray-600">Same-day consultations for acute illnesses, chronic disease management, and preventative health screenings.</p>
+            <a href="{% url 'book_appointment' %}" class="mt-6 inline-block text-blue-600 font-semibold">Book Consultation →</a>
+        </div>
+        
+        <div class="service-card p-8 border rounded-2xl hover:shadow-xl transition-all">
+            <h3 class="text-xl font-bold text-navy">AI Diagnostics</h3>
+            <p class="mt-4 text-gray-600">Utilizing CareBase's proprietary AI system for early detection and precision imaging analysis.</p>
+            <a href="{% url 'contact' %}" class="mt-6 inline-block text-blue-600 font-semibold">Learn More →</a>
+        </div>
+
+        <div class="service-card p-8 border rounded-2xl hover:shadow-xl transition-all">
+            <h3 class="text-xl font-bold text-navy">Laboratory Testing</h3>
+            <p class="mt-4 text-gray-600">On-site blood work and diagnostic tests with results delivered directly to your CareBase portal.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
