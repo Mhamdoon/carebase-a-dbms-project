@@ -1,0 +1,187 @@
+{% extends 'appointments/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section - Large Banner -->
+<section class="hero-banner" style="background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); padding: 120px 0; border-radius: 0 0 60px 60px;">
+    <div class="container">
+        <div style="text-align: center;">
+            <h1 style="font-size: 3.5rem; font-weight: 900; color: #1A365D; margin-bottom: 20px; line-height: 1.2;">
+                Your private clinic in the heart of downtown<br>with no membership fees.
+            </h1>
+            <p style="font-size: 1.1rem; color: #718096; margin-bottom: 40px;">
+                Private medical clinic – Your healthcare provider
+            </p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="{% url 'book_appointment' %}" style="background-color: #A3E635; color: white; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s; display: inline-block; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(163, 230, 53, 0.3);">Make an appointment</a>
+                <a href="{% url 'about' %}" style="background-color: transparent; color: #1A365D; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s; display: inline-block; border: 2px solid #1A365D; cursor: pointer;">Learn about us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Our Clinic Section -->
+<section style="padding: 80px 0; background-color: white;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+        <div>
+            <div style="color: #A3E635; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px;">About us</div>
+            <h2 style="font-size: 3rem; font-weight: 900; color: #1A365D; margin-bottom: 30px;">Why choose our clinic?</h2>
+            <p style="font-size: 1rem; color: #2D3748; line-height: 1.8; margin-bottom: 20px;">
+                At <strong>CareBase</strong>, we are deeply committed to providing you with personalized, high-quality care, delivered by a close-knit team.
+            </p>
+            <div style="space-y: 15px;">
+                <p style="font-size: 0.95rem; color: #2D3748; line-height: 1.8; margin-bottom: 12px;">
+                    <strong>Reception Staff:</strong> From the moment you arrive, our receptionist welcomes you and guides you with care.
+                </p>
+                <p style="font-size: 0.95rem; color: #2D3748; line-height: 1.8; margin-bottom: 12px;">
+                    <strong>Nursing Support:</strong> Our nurse supports you with compassion throughout your medical journey.
+                </p>
+                <p style="font-size: 0.95rem; color: #2D3748; line-height: 1.8; margin-bottom: 12px;">
+                    <strong>Medical Care:</strong> The physician listens attentively and tailors treatments to your specific needs, working closely with the entire team.
+                </p>
+                <p style="font-size: 0.95rem; color: #2D3748; line-height: 1.8; margin-bottom: 12px;">
+                    <strong>Care Coordination:</strong> Finally, our Director of Care ensures seamless coordination to guarantee an exceptional standard of care.
+                </p>
+            </div>
+            <p style="font-size: 1rem; color: #1A365D; font-weight: 600; line-height: 1.8; margin-top: 25px; font-style: italic;">
+                A relationship built on trust — that's what makes all the difference.
+            </p>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <img src="{% static 'img/clinic1.jpeg' %}" alt="CareBase Clinic" style="width: 100%; height: 280px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <img src="{% static 'img/clinic2.jpeg' %}" alt="CareBase Clinic" style="width: 100%; height: 280px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section style="padding: 80px 0; background: linear-gradient(135deg, #F0F7FF 0%, #DBEAFE 100%);">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <div style="color: #A3E635; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px;">Our Services</div>
+            <h2 style="font-size: 3rem; font-weight: 900; color: #1A365D; margin-bottom: 20px;">
+                Take charge of your health today<br>for sustainable well-being.
+            </h2>
+            <p style="font-size: 1rem; color: #2D3748; margin-bottom: 40px;">
+                Opting for private medical consultations ensures quick access, in-depth appointments and personalized care.
+            </p>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <a href="{% url 'book_appointment' %}" style="background-color: #A3E635; color: white; padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s; display: inline-block;">Make an appointment</a>
+                <a href="{% url 'patients' %}" style="background-color: transparent; color: #1A365D; padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s; display: inline-block; border: 2px solid #1A365D;">View all services</a>
+            </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+            <div style="background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E2E8F0; transition: all 0.3s;">
+                <div style="margin-bottom: 20px;">
+                    <span style="font-size: 2.5rem;">💉</span>
+                </div>
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #1A365D; margin-bottom: 12px;">General Consultation</h3>
+                <p style="font-size: 0.95rem; color: #718096;">Professional medical advice for all your health concerns.</p>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E2E8F0; transition: all 0.3s;">
+                <div style="margin-bottom: 20px;">
+                    <span style="font-size: 2.5rem;">🏥</span>
+                </div>
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #1A365D; margin-bottom: 12px;">Specialist Services</h3>
+                <p style="font-size: 0.95rem; color: #718096;">Access to expert specialists across multiple medical fields.</p>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E2E8F0; transition: all 0.3s;">
+                <div style="margin-bottom: 20px;">
+                    <span style="font-size: 2.5rem;">❤️</span>
+                </div>
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #1A365D; margin-bottom: 12px;">Health Check-up</h3>
+                <p style="font-size: 0.95rem; color: #718096;">Comprehensive health screening and preventive care.</p>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E2E8F0; transition: all 0.3s;">
+                <div style="margin-bottom: 20px;">
+                    <span style="font-size: 2.5rem;">📋</span>
+                </div>
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #1A365D; margin-bottom: 12px;">Follow-up Care</h3>
+                <p style="font-size: 0.95rem; color: #718096;">Continuous medical support and treatment monitoring.</p>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E2E8F0; transition: all 0.3s;">
+                <div style="margin-bottom: 20px;">
+                    <span style="font-size: 2.5rem;">🚨</span>
+                </div>
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #1A365D; margin-bottom: 12px;">Emergency Services</h3>
+                <p style="font-size: 0.95rem; color: #718096;">Quick response for urgent medical needs.</p>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E2E8F0; transition: all 0.3s;">
+                <div style="margin-bottom: 20px;">
+                    <span style="font-size: 2.5rem;">⚕️</span>
+                </div>
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #1A365D; margin-bottom: 12px;">Personalized Plans</h3>
+                <p style="font-size: 0.95rem; color: #718096;">Tailored healthcare solutions for your specific needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Client Testimonials Section -->
+<section style="padding: 80px 0; background-color: white;">
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <div style="color: #A3E635; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px;">Testimonials</div>
+            <h2 style="font-size: 3rem; font-weight: 900; color: #1A365D; margin-bottom: 20px;">Client testimonials</h2>
+            <p style="font-size: 1rem; color: #718096;">
+                Discover the experiences of those who have chosen our services.<br>
+                Their feedback is testament to the quality and commitment we deliver for every patient.
+            </p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div style="background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                <div style="font-size: 1.2rem; color: #FFA500; margin-bottom: 15px;">★★★★★</div>
+                <p style="font-size: 0.95rem; color: #2D3748; margin-bottom: 20px; line-height: 1.8;">
+                    "Very good service... attentive and professional team.. appointments respected... kudos to the whole team."
+                </p>
+                <div>
+                    <h4 style="font-weight: 700; color: #1A365D; margin: 0;">Diane St-Germain</h4>
+                    <p style="color: #718096; font-size: 0.9rem; margin: 5px 0 0 0;">Patient</p>
+                </div>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                <div style="font-size: 1.2rem; color: #FFA500; margin-bottom: 15px;">★★★★★</div>
+                <p style="font-size: 0.95rem; color: #2D3748; margin-bottom: 20px; line-height: 1.8;">
+                    "I am really satisfied with the service provided at this medical clinic. Excellent service— a friend referred me to this clinic, and I am very grateful!"
+                </p>
+                <div>
+                    <h4 style="font-weight: 700; color: #1A365D; margin: 0;">Patient Name</h4>
+                    <p style="color: #718096; font-size: 0.9rem; margin: 5px 0 0 0;">Patient</p>
+                </div>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+                <div style="font-size: 1.2rem; color: #FFA500; margin-bottom: 15px;">★★★★★</div>
+                <p style="font-size: 0.95rem; color: #2D3748; margin-bottom: 20px; line-height: 1.8;">
+                    "I would like to thank all the staff for their warm welcome and complete availability, starting with the reception team and all the healthcare professionals. I am very satisfied with their service."
+                </p>
+                <div>
+                    <h4 style="font-weight: 700; color: #1A365D; margin: 0;">Nejib Ben Ahmed</h4>
+                    <p style="color: #718096; font-size: 0.9rem; margin: 5px 0 0 0;">Patient</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section with Personalized Care -->
+<section style="padding: 80px 0; background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);">
+    <div class="container">
+        <div style="background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%); border-radius: 40px; padding: 60px 40px; text-align: center; color: white; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+            <div style="margin-bottom: 20px;">
+                <span style="font-size: 3rem;">💚</span>
+            </div>
+            <h2 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 20px;">Innovative personalized care awaits you</h2>
+            <a href="{% url 'book_appointment' %}" style="background-color: #A3E635; color: white; padding: 12px 32px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s; display: inline-block; border: none; cursor: pointer;">Make an appointment</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

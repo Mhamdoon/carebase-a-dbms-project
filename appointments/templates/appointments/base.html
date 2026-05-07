@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareBase | Private Medical Clinic</title>
+    
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span>Call Us: +92 41 850 4422</span>
+            </div>
+            <div class="lang-switcher" style="display:flex; align-items:center; gap:16px;">
+                {% if user.is_authenticated %}
+                    <span style="font-size:0.82rem; color:#CBD5E0;">
+                        👤 {{ user.email }}
+                    </span>
+                    <a href="{% url 'account_logout' %}"
+                       style="font-size:0.82rem; color:#A3E635; font-weight:600; text-decoration:none;">
+                        Sign Out
+                    </a>
+                {% else %}
+                    <a href="{% url 'account_login' %}"
+                       style="font-size:0.82rem; color:#A3E635; font-weight:600; text-decoration:none;">
+                        Sign In
+                    </a>
+                {% endif %}
+                <span style="color:#718096; font-size:0.82rem;">English</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Care<span>Base</span></div>
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About us</a></li>
+                <li><a href="{% url 'patients' %}">Patients</a></li>
+                <li><a href="{% url 'rates' %}">Rates</a></li>
+                <li><a href="{% url 'contact' %}">Contact us</a></li>
+            </ul>
+            <a href="{% url 'book_appointment' %}" class="btn-appointment-green">Make an appointment!</a>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-wave"></div>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo-white">Care<span>Base</span></div>
+                <p>Your private medical clinic with no membership fees.</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="{% url 'about' %}">About us</a></li>
+                    <li><a href="{% url 'rates' %}">Rates</a></li>
+                    <li><a href="{% url 'patients' %}">Services</a></li>
+                    <li><a href="{% url 'contact' %}">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact us</h4>
+                <p>📧 communication@carebase.com</p>
+                <p>📞 +92 41 850 4422</p>
+                <p>📍 Suite 12, Regency Plaza, Mall Road, Faisalabad</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>CareBase &copy; 2026 All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>

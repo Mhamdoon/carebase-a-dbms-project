@@ -1,0 +1,134 @@
+{% extends 'appointments/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Page Header -->
+<section style="background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); padding: 80px 0; text-align: center; border-radius: 0 0 60px 60px;">
+    <div class="container">
+        <h1 style="font-size: 3rem; font-weight: 900; color: #1A365D; margin-bottom: 15px;">About us</h1>
+        <p style="font-size: 1.1rem; color: #718096;">Redefining private healthcare in Faisalabad with innovation and empathy.</p>
+    </div>
+</section>
+
+<!-- Vision Section -->
+<section style="padding: 80px 0; background-color: white;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+        <div>
+            <div style="color: #A3E635; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px;">Our vision</div>
+            <h2 style="font-size: 3rem; font-weight: 900; color: #1A365D; margin-bottom: 30px;">Connected through people, Guided by health</h2>
+            <p style="font-size: 0.95rem; color: #2D3748; line-height: 1.8; margin-bottom: 15px;">
+                At <strong>CareBase</strong>, we take great pride in offering you personalized and high-quality care, thanks to a dedicated and cohesive team. From the moment you arrive at our facility in <strong>Regency Plaza</strong>, our reception staff is there to warmly welcome you and address any administrative questions, ensuring your journey is smooth and that you are directed to the right care.
+            </p>
+            <p style="font-size: 0.95rem; color: #2D3748; line-height: 1.8;">
+                Our nurses, both experienced and compassionate, monitor your health while providing the necessary support before and after your medical consultation, while our doctors listen carefully to offer treatments tailored to your specific needs. Finally, the Director of Care ensures the optimal coordination of all services, guaranteeing that each patient benefits from the best practices in healthcare and a relationship of trust.
+            </p>
+        </div>
+        <div>
+            <img src="{% static 'img/docpat.jpg' %}" alt="CareBase Team" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section style="padding: 80px 0; background: linear-gradient(135deg, #F0F7FF 0%, #DBEAFE 100%);">
+    <div class="container">
+        <div style="color: #A3E635; font-weight: 600; font-size: 0.95rem; margin-bottom: 20px;">Our mission</div>
+        <h2 style="font-size: 3rem; font-weight: 900; color: #1A365D; margin-bottom: 40px;">Private medical services</h2>
+        <div style="max-width: 900px;">
+            <p style="font-size: 0.95rem; color: #2D3748; line-height: 1.8; margin-bottom: 20px;">
+                Since its founding in <strong>1977</strong>, <strong>CareBase</strong> has been committed to providing highly personalized and innovative private medical services. Established as an affordable and accessible medical alternative, the clinic was built on the foundation of ensuring impeccable service quality within a warm and friendly environment. Over the decades, CareBase has evolved into a premier healthcare destination in Faisalabad, specifically operating from its modern facility at <strong>Regency Plaza</strong>.
+            </p>
+            <p style="font-size: 0.95rem; color: #2D3748; line-height: 1.8;">
+                What began as a mission to provide quick access to essential care has grown into a cohesive ecosystem where a dedicated team of general practitioners, specialists, and passionate nurses work together to treat everything from seasonal viruses to complex medical emergencies. Today, the clinic continues to lead the way in private medicine, offering flexible time slots and first-class follow-up care that remains deeply rooted in its nearly five-decade history of trust and medical excellence.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Boxes Section -->
+<section style="padding: 80px 0; background-color: white;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+        <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E2E8F0; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <div style="margin-bottom: 20px;">
+                <img src="{% static 'img/favicon.ico' %}" alt="Professional Care" style="width: 48px; height: 48px;">
+            </div>
+            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1A365D; margin-bottom: 20px;">Professional Care</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="font-size: 0.95rem; color: #2D3748; line-height: 1.8; margin-bottom: 12px;">
+                    <span style="color: #A3E635; margin-right: 10px;">✓</span>Expert team of doctors and specialists
+                </li>
+                <li style="font-size: 0.95rem; color: #2D3748; line-height: 1.8; margin-bottom: 12px;">
+                    <span style="color: #A3E635; margin-right: 10px;">✓</span>Personalized treatment plans
+                </li>
+                <li style="font-size: 0.95rem; color: #2D3748; line-height: 1.8; margin-bottom: 12px;">
+                    <span style="color: #A3E635; margin-right: 10px;">✓</span>Modern medical facilities
+                </li>
+                <li style="font-size: 0.95rem; color: #2D3748; line-height: 1.8;">
+                    <span style="color: #A3E635; margin-right: 10px;">✓</span>24/7 patient support
+                </li>
+            </ul>
+        </div>
+        
+        <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #E2E8F0; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <div style="margin-bottom: 20px;">
+                <img src="{% static 'img/favicon.ico' %}" alt="Accessible Healthcare" style="width: 48px; height: 48px;">
+            </div>
+            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1A365D; margin-bottom: 20px;">Accessible Healthcare</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="font-size: 0.95rem; color: #2D3748; line-height: 1.8; margin-bottom: 12px;">
+                    <span style="color: #A3E635; margin-right: 10px;">✓</span>No membership fees required
+                </li>
+                <li style="font-size: 0.95rem; color: #2D3748; line-height: 1.8; margin-bottom: 12px;">
+                    <span style="color: #A3E635; margin-right: 10px;">✓</span>Flexible appointment scheduling
+                </li>
+                <li style="font-size: 0.95rem; color: #2D3748; line-height: 1.8; margin-bottom: 12px;">
+                    <span style="color: #A3E635; margin-right: 10px;">✓</span>Affordable pricing
+                </li>
+                <li style="font-size: 0.95rem; color: #2D3748; line-height: 1.8;">
+                    <span style="color: #A3E635; margin-right: 10px;">✓</span>First-class follow-up care
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Meet Our Team Section -->
+<section style="padding: 80px 0; background: linear-gradient(135deg, #F0F7FF 0%, #DBEAFE 100%);">
+    <div class="container">
+        <h2 style="text-align: center; font-size: 3rem; font-weight: 900; color: #1A365D; margin-bottom: 60px;">Meet Our Specialists</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+            {% for doctor in doctors %}
+            <div style="background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #E2E8F0; text-align: center;">
+                <div style="width: 120px; height: 120px; background: #DBEAFE; border-radius: 50%; margin: 0 auto 20px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                    {% if doctor.image %}
+                        <img src="{% static doctor.image %}" alt="Dr. {{ doctor.name }}" style="width: 100%; height: 100%; object-fit: cover;">
+                    {% else %}
+                        <span style="font-size: 3rem;">👨‍⚕️</span>
+                    {% endif %}
+                </div>
+                <h3 style="font-weight: 700; font-size: 1.2rem; color: #1A365D; margin: 0;">Dr. {{ doctor.name }}</h3>
+                <p style="color: #A3E635; font-weight: 600; font-size: 0.9rem; margin: 5px 0;">{{ doctor.specialty }}</p>
+            </div>
+            {% empty %}
+            <div style="grid-column: 1 / -1; text-align: center; padding: 40px;">
+                <p style="color: #718096; font-size: 1rem;">No doctors added yet. Please visit the admin panel to add doctors.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section style="padding: 60px 0;">
+    <div class="container">
+        <div style="background: linear-gradient(135deg, #1A365D 0%, #2D3748 100%); border-radius: 40px; padding: 60px 40px; text-align: center; color: white; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+            <div style="margin-bottom: 20px;">
+                <span style="font-size: 3rem;">💚</span>
+            </div>
+            <h2 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 20px;">Your health, our priority!</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 25px;">Make an appointment today for personalized care.</p>
+            <a href="{% url 'book_appointment' %}" style="background-color: #A3E635; color: white; padding: 12px 32px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s; display: inline-block; border: none; cursor: pointer;">Make an appointment</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

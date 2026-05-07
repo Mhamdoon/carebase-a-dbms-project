@@ -1,0 +1,47 @@
+{% extends 'appointments/base.html' %}
+
+{% block content %}
+<section class="container py-20">
+    <div class="grid lg:grid-cols-2 gap-16">
+        <div>
+            <h1 class="text-4xl font-bold text-navy">Contact Us</h1>
+            <p class="mt-4 text-gray-600 text-lg">We’re here to help. Reach out to our team at Regency Plaza.</p>
+            
+            <div class="mt-12 space-y-8">
+                <div class="flex items-start gap-4">
+                    <div class="icon text-blue-600">📍</div>
+                    <div>
+                        <h4 class="font-bold">Our Location</h4>
+                        <p class="text-gray-500">Suite 12, Regency Plaza, Mall Road,<br>Peoples Colony No. 1, Faisalabad, 38000</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="icon text-blue-600">📞</div>
+                    <div>
+                        <h4 class="font-bold">Phone</h4>
+                        <p class="text-gray-500">+92 41 850 4422</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="icon text-blue-600">✉️</div>
+                    <div>
+                        <h4 class="font-bold">Email</h4>
+                        <p class="text-gray-500">communication@carebase.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-50 p-10 rounded-3xl">
+            <h3 class="mb-6">Send us a message</h3>
+            <form method="POST" class="space-y-4">
+                {% csrf_token %}
+                <input type="text" placeholder="Full Name" class="w-full p-4 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="email" placeholder="Email Address" class="w-full p-4 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-blue-500">
+                <textarea placeholder="Tell us how we can help..." rows="4" class="w-full p-4 rounded-xl border border-gray-200 outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                <button type="submit" class="w-full bg-navy text-white py-4 rounded-xl font-bold hover:bg-blue-600 transition-colors">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
